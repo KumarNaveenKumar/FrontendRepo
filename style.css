@@ -15,35 +15,28 @@ body{
       color: hsl(227, 10%, 46%);
       font-weight: 400;
     }
-    .top,
+
+    .top {
+        height: 50vw;
+        width: 50vw;
+        transform: translate(-14vw, -13vw);
+    }
     .bottom {
-position: absolute;
+            height: 50vw;
+            width: 50vw;
+            transform: translate(62vw, -25vw);
     }
-
-    .top{
-        transform: translate(-35%,-55%);
-    }
-    .bottom{
-        bottom: 0;
-        right: 0;
-    }
-    .bottom{
-        transform: translate(25% , 65%);
-    }
-
-
 
     .card {
-        width: clamp(320px, calc(50vh - 100px), 400px);
-
+        width: 30vw;
+        height: 30vw;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
-        border-radius: 12px;
+        border-radius: 0.5vw;
         background-color: white;
-        box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.2);
+        box-shadow: 1vw 1vw 0.8vw rgb(26 139 149);
         }
 
 
@@ -51,24 +44,23 @@ position: absolute;
 
         .card_top{
             width: 100%;
-            height: 135px;
-
+            height: 10vw;
             position: relative;
             background-image: url("images/bg-pattern-card.svg");
             background-size: contain;
 
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
+            border-top-left-radius: 0.5VW;
+            border-top-right-radius: 0.5VW;
         }
 
 
 
         .card_profile {
-            width: 50%;
-            height: 100px;
+            width: 9vw;
+            height: 9vw;
             border-radius: 50%;
             background: white;
-            padding: 5px;
+            padding: 0.23vw;
             position: absolute;
             bottom: -50%;
             left: 50%;
@@ -78,39 +70,49 @@ position: absolute;
 
 
         .card_profile img {
-            width: 100%;
-            height: 100%;
+            width: 8.6vw;
+            height: 8.6vw;
             border-radius: 50%;
-
         }
 
 
         .card_info {
-            margin-top: 60px;
-            display: grid;
-            grid-template-columns: 60% auto;
+            width: 100%;
+            height: 12vw;
+            position: relative;
         }
         .card_name{
-            padding: 15px 5px;
-            text-align: right;
             font-weight: 700;
+            font-size: 1.1vw;
             color: hsl(229, 23%, 23%);
+            position:absolute;
+            top: 5vw;
+            left: 11vw;
         }
         .card_age{
-            padding: 15px 5px;
+            position:absolute;
+            font-size: 1.1vw;
+            top: 5vw;
+            left: 18vw;
         }
         .card_place{
-             grid-column: span 2;
-             text-align: center;
-             font-size: 14px;
              color: hsl(0, 0%, 59%);
+             font-size: 1.1vw;
+             position:absolute;
+             top: 6.5vw;
+             left: 13.5vw;
         }
 
         .card_stats{
-            margin-top: 15px;
-            padding: 20px 0;
-            border-top: 1px solid hsl(0, 0%, 59%);
+            width: 100%;
+            height: 8vw;
+            padding: 1vw;
+            border-top: 0.1vw solid hsl(0, 0%, 59%);
             display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
         }
 
         .stats {
@@ -121,31 +123,11 @@ position: absolute;
             align-items: center;
         }
         .stat_num {
-            font-size: 18px;
+            font-size: 1.2vw;
             color: hsl(229, 23%, 23%);
             font-weight: 700;
-            margin-bottom: 5px;
         }
         .stat_title {
-            font-size: 14px;
+            font-size: 1vw;
             color: hsl(0, 0%, 59%);
         }
-
-    @media screen and (max-width: 706px) {
-        .top {
-            transform: translate(-70%, -55%);
-        }
-        .bottom {
-            transform: (70%, 55%);
-        }
-    }
-        @media screen  and (max-height: 700px) {
-        .bottom {
-            transform: translate(70%, 75%);
-        }
-    }
-    @media screen and (max-width: 340px) {
-        .card {
-            width: 280px;
-        }
-    }
